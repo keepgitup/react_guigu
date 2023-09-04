@@ -9,7 +9,6 @@
 <body>
     <!-- 准备好一个“容器” -->
     <div id="test"></div>
-
     <!-- 引入react核心库 -->
     <script type="text/javascript" src="../js/react.development.js"></script>
     <!-- 引入react-dom，用于支持react操作DOM -->
@@ -18,12 +17,19 @@
     <script type="text/javascript" src="../js/babel.min.js"></script>
 
     <script type="text/babel">
-        /* 此处一定要写babel 而且還是雙引號 */ /*1.创建虚拟DOM*/ const VDOM = (
-        <h1>Hello,React</h1>
-        ); //2.渲染虚拟DOM到页面 */
+        /* 此处一定要写babel 而且還是雙引號 */ /*1.创建虚拟DOM*/
+// const myId='shangguigu',
+// const myData="hello react",
+const VDOM=(<h2 className="title" id={myId.tolowercase}>
+    <span style={{}}>{myData.tolowercase}</span></h2>
+        );
+//4.內聯樣式,要用style={{key:value}}的形式去寫,外花寫jsx形式,內花寫對象變量,所以記得加引號.
 
-        ReactDOM.render(VDOM, document.getElementById("test"));
-    </script>
+        //2.渲染虚拟DOM到页面 */
+ReactDOM.render(VDOM, document.getElementById("test"));
+
+</script>
 </body>
+
 
 </html>
