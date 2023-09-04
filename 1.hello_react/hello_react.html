@@ -20,12 +20,24 @@
         /* 此处一定要写babel 而且還是雙引號 */ /*1.创建虚拟DOM*/
 const myId='shanGguigu';
 const myData="hello React";
-const VDOM=(<h2 className="title" id={myId.toLowerCase()}>
+const VDOM=(
+<div>
+<h2 className="title" id={myId.toLowerCase()}>
     <span style={{color:"blue",fontSize:'29px'}}>{myData.toLowerCase()}</span></h2>
-        );
+<h2 className="title" id={myId.toUpperCase()}>
+    <span style={{color:"blue",fontSize:'29px'}}>{myData.toUpperCase()}</span></h2>
+    <input type="text"/>
+</div>
+    );
 //4.內聯樣式,要用style={{key:value}}的形式去寫,外花寫jsx形式,內花寫對象變量,所以記得加引號.
+//5.只有一個根標籤
+//6.標籤要閉合
+//<Good>123</Good>
+//7.標籤首個字母a.若小寫字母開頭,則將標籤轉為html同名元素,若無同名元素就報錯
+// b.若答謝字母開頭,react就去渲染對應組件,若組件沒有定義則抱錯
 
-        //2.渲染虚拟DOM到页面 */
+
+//2.渲染虚拟DOM到页面 */
 ReactDOM.render(VDOM, document.getElementById("test"));
 
 </script>
