@@ -7,7 +7,7 @@
 <body>
 	<!-- 准备好一个“容器” -->
 	<div id="test"></div>
-	
+
 	<!-- 引入react核心库 -->
 	<script type="text/javascript" src="../js/react.development.js"></script>
 	<!-- 引入react-dom，用于支持react操作DOM -->
@@ -27,7 +27,7 @@
 		}
 		//2.渲染组件到页面
 		ReactDOM.render(<MyComponent/>,document.getElementById('test'))
-		/* 
+		/*
 			执行了ReactDOM.render(<MyComponent/>.......之后，发生了什么？
 					1.React解析组件标签，找到了MyComponent组件。
 					2.发现组件是使用类定义的，随后new出来该类的实例，并通过该实例调用到原型上的render方法。
